@@ -1,7 +1,7 @@
 #About  
 My repository with scripts for Maltronics's Malduino keystroke injection tool.  
-Written and tested on Malduino Elite.  
-https://maltronics.com/collections/malduinos
+Written and tested on the [Maltronics](https://maltronics.com/collections/malduinos) Malduino Elite, but most (if not all) of them should also be compatible with [Hak5's](https://shop.hak5.org/) Rubber Ducky   
+
 
 
 #Scripts  
@@ -17,7 +17,8 @@ https://maltronics.com/collections/malduinos
 
 2. [Exfiltrate Firefox Profile As Image To Network Share](Scripts/Exfil/ExfilFirefoxProfileAsImageToNetworkShare)  
  Requirements:  
-   * A network shared directory where you are able to write without having to type in credentials
+   * A network shared directory where you are able to write without having to type in credentials  
+   * Built for and tested on Windows 10
    * Replace ImageUrlHere with the URL of the jpg you want to use  
    * Replace NetworkShareHere with your network shared directory  
   Workflow:  
