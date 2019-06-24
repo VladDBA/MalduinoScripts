@@ -15,7 +15,7 @@ Written and tested on the [Maltronics](https://maltronics.com/collections/maldui
    * Closes Paint and displays the Desktop  
    * total runtime (based on sum(delay)) - 8.26 seconds 
  
-2. [Simple Wallpaper Changer vi PowerShell](Scripts/SimpleWallpaperChangerPS)  
+2. [Simple Wallpaper Changer via PowerShell](Scripts/SimpleWallpaperChangerPS)  
  Requirements:  
    * Access to PowerShell  
    * Adjust the delays as needed to match your target machine  
