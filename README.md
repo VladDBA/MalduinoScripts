@@ -7,13 +7,13 @@ Written and tested on the [Maltronics](https://maltronics.com/collections/maldui
 #Scripts  
 1. [Simple Wallpaper Changer](Scripts/SimpleWallpaperChanger)  
    * Opens the run menu and calls Internet Explorer (the browser can be changed by replacing iexplore with firefox or chrome in the script) passing a link to an image on imgur (link can be replaced with whatever image you need/want)  
-   * waits 2.6 seconds for the image to load (delay may vary depending on machine and connection speed)  
-   * saves the image as 1hack.jpg to C:\Users\CurrentUser\Pictures  
-   * closes Internet Explorer  
-   * opens hack1.jpg in Paint
-   * opens Paint's file menu and sets hack1.jpg as the background image 
+   * Waits 2.6 seconds for the image to load (delay may vary depending on machine and connection speed)  
+   * Saves the image as 1hack.jpg to C:\Users\CurrentUser\Pictures  
+   * Closes Internet Explorer  
+   * Opens hack1.jpg in Paint
+   * Opens Paint's file menu and sets hack1.jpg as the background image 
    * Closes Paint and displays the Desktop  
-   * total runtime (based on sum(delay)) - 8.26 seconds 
+   * Total runtime (based on sum(delay)) - 8.26 seconds 
  
 2. [Simple Wallpaper Changer via PowerShell](Scripts/SimpleWallpaperChangerPS)  
  Requirements:  
@@ -24,7 +24,8 @@ Written and tested on the [Maltronics](https://maltronics.com/collections/maldui
    * Executes the command and then waits 1.6 seconds (sufficient time for PowerShell to complete the commands and for Pait to open the image)  
    * Once in Paint, it sets the image as background via the file menu and then exits Paint  
    * Calls again PowerShell to delete $Home\Pictures\1hack.jpg and exit  
-   * Displays the Desktop
+   * Displays the Desktop  
+   * Total runtime (based on sum(delay)) - 6.25 seconds
 
 3. [Exfiltrate Firefox Profile As Image To Network Share](Scripts/Exfil/ExfilFirefoxProfileAsImageToNetworkShare)  
  Requirements:  
